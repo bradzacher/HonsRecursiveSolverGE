@@ -1,0 +1,29 @@
+# ####################################### 
+# Settings for GAlib                    # 
+# Written by: Brad Zacher               # 
+# Computer Science Honours Project 2012 # 
+# Created: 07/03/12                     # 
+# ####################################### 
+# note that a # must be proceeded by [ a-zA-Z0-9] or else the parsing function will fail miserably
+# format for comments							# (<parameter type> [<default value>]) <description of parameter>
+
+#minimaxi										# (int [1]) 
+number_of_generations			200				# (int [250]) Number of generations.
+#convergence_percentage							# (float [0.99]) 
+#generations_to_convergence						# (int [20]) 
+crossover_probability			0.9				# (float [0.9]) Probability of Crossover.
+mutation_probability			0.01			# (float [0.01]) Probability of Mutation.
+population_size					100				# (int [50]) Population size.
+#number_of_populations							# (int [10]) 
+#replacement_percentage			1.0				# (float [0.5]) Replacement strategy for steady-state GA.
+#replacement_number								# (int [10]) 
+#number_of_best									# (int [2]) 
+score_frequency					1				# (int [1]) How often to record scores.
+flush_frequency					20				# (int [0]) How often to dump scores to file.
+score_filename					is-output.dat	# (char* [generations.dat]) Output data file.
+#select_scores									# (int [GAStatistics::Maximum]) 
+elitism							gaTrue			# (GABoolean [gaTrue]) 
+#number_of_offspring							# (int [2]) 
+#record_diversity								# (GABoolean [gaFalse]) 
+#migration_percentage							# (float [0.1]) 
+#migration_number								# (int [5])

@@ -1,0 +1,17 @@
+#define op + 
+#define base_op_val 0
+int i, result;
+
+if (x < 2) {
+ return x;
+}
+
+result = base_op_val;
+for (i = c; i < (x + 3); i++) {
+ if ((doMaths(x, i, '%') == 0)) {
+ result = result op mrrc(doMaths(x, i, '/'), i);
+ }
+}
+
+return result;
+

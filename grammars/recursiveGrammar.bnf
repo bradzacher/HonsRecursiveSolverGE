@@ -1,0 +1,14 @@
+<rec_expr>        ::= <rec_expr2>
+<rec_expr2>       ::= doMaths(<var>, <digit>, <op>) | doMaths(<digit>, <var>, <op>)
+
+<op>              ::= "'-'" | "'*'" | "'+'"
+
+<digit>           ::= 1 | 2 | <big_digit>
+<big_digit>       ::= 3 | 4 | 5 | <bigger_digit>
+<bigger_digit>    ::= 6 | 7 | <huge_digit>
+<huge_digit>      ::= 8 | 9 | 0
+
+<base>            ::= <digit> | <var>
+
+
+<var>             ::= x

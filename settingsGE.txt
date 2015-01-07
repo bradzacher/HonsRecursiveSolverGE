@@ -1,0 +1,27 @@
+######################################### 
+# Settings for GAlib                    # 
+# Written by: Brad Zacher               # 
+# Computer Science Honours Project 2012 # 
+# Created: 07/03/12                     # 
+#########################################
+# unlike the GA parser, my parser doesn't care what a # is followed by
+# format for comments                                  # (<parameter type> [<default value>]) <description of parameter>
+
+seed                    0                              # (int[0]) - 0 for random seed
+wrappingEvents          0                              # (int[0]) - the number of times an individual is able to wrap after reaching the end of its gene
+sensibleInit            false                          # (bool[false]) - true for sensible initialisation, false for random
+minSize                 5                              # (int[15]) - the minimum size for random initialisation
+maxSize                 20                             # (int[15]) - the maximum size for random initialisation
+grow                    0.5                            # (float[0.5]) - the growth rate
+maxDepth                7                              # (int[10]) - maximum tree depth
+tailSize                0                              # (int[0]) - 
+tailRatio               0.0                            # (float[0.0]) - only used if tailSize=0.
+effectiveXO             true                           # (bool[false]) - true for effective cross over, false for one-point
+wrapperFolder           wrappers/                      # (str[wrappers/]) - the foldername of the wrapper files
+grammarFile             grammars/recursiveGrammar.bnf  # (str[grammars/recursiveGrammar.bnf]) - the foldername and filename of the grammar file
+treeDataFile            outputFiles/treeData.c         # (str[outputFiles/treeData.cpp]) - the foldername and filename of the tree data cpp file
+outputFile              outputFiles/alreadyFound.txt   # (str[outputFiles/alreadyFound.txt]) - the foldername and filename of the output file
+paramFile               outputFiles/param.c            # (str[outputFiles/paramFunction.txt]) - the foldername and filename of the parameter function (can be an empty file)
+phase                   1                              # (int[1]) - the phase the GA obj function should be testing in
+distanceFormula         1                              # (int[1]) - the distance formula to use - 0=all-or-nothign, 1=standard distance, 2=squared distance
+maxTimeMS               20                             # (int[20]) - the maximum evaluation time for an individual in milliseconds

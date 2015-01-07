@@ -1,0 +1,5 @@
+<expr_root> ::= <loop_expr>
+<loop_expr> ::= /**/(<var> "<" i)/**//**/doMaths(<var>, i, '-')/**/ | /**/<guard>/**//**/doMaths(i, <var>, <loop_op>)/**/ | /**/<guard>/**//**/doMaths(<var>, i, <loop_op>)/**/
+<loop_op> ::= '*' | '+' | '/'
+<guard> ::= (doMaths(<var>, i, '%') == 0) | (<var> "<" i)
+<var> ::= x

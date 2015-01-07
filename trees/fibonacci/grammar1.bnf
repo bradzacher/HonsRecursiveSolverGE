@@ -1,0 +1,12 @@
+<<<<<<< .mine
+<expr_root> ::= <expr>
+<expr> ::= doMaths(<var>, <digit>, <op>) | doMaths(<digit>, <var>, <op>)
+=======
+<expr_root> ::= doMaths(<var>, <digit>, <op>) | doMaths(<digit>, <var>, <op>)
+>>>>>>> .r758
+<op> ::= '-' | '*' | '+'
+<digit> ::= 1 | 2 | <big_digit>
+<big_digit> ::= 3 | 4 | 5 | <bigger_digit>
+<bigger_digit> ::= 6 | 7 | <huge_digit>
+<huge_digit> ::= 8 | 9
+<var> ::= x

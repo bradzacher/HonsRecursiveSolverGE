@@ -1,0 +1,23 @@
+<expr_root>    ::= if (<var> "<"= <digit>) {\n\
+	return <lit>;\n\
+} else {\n\
+    return <expr1> <plain_op> <expr2>;\n\
+}\n
+
+<expr1>        ::= <rec1> | doMaths(<rec1>, <lit>, <op>) | doMaths(<lit>, <rec1>, <op>)
+<rec1>         ::= recurse(param(<var>, 1))
+
+<expr2>        ::= <rec2> | doMaths(<rec2>, <lit>, <op>) | doMaths(<lit>, <rec2>, <op>)
+<rec2>         ::= recurse(param(<var>, 2))
+
+<op>           ::= '<plain_op>'
+<plain_op>     ::= - | * | +
+
+<lit>          ::= <digit> | <var>
+
+<digit>        ::= 1 | 2 | <big_digit>
+<big_digit>    ::= 3 | 4 | 5 | <bigger_digit>
+<bigger_digit> ::= 6 | 7 | <huge_digit>
+<huge_digit>   ::= 8 | 9
+
+<var>          ::= x

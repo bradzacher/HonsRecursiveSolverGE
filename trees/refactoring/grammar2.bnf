@@ -1,0 +1,27 @@
+<expr_root> ::= \
+#define op <mrrc_op>\n\
+int i, result;\n\
+\n\
+if (<pred>) {\n\
+    return <ret>;\n\
+}\n\
+\n\
+result = base_op_val;\n\
+for (i = <rl>; i "<" <ru>; i++) {\n\
+    if ((doMaths(x, i, '%') == 0)) {\n\
+        result = result op mrrc(doMaths(x, i, '/'), i);\n\
+    }\n\
+}\n\
+\n\
+return result;\n
+<mrrc_op> ::= + \n#define base_op_val 0 | - \n#define base_op_val 0 | * \n#define base_op_val 1
+<pred> ::= <var> "<" <digit> | <var> ">" <digit>
+<ret> ::= <lit>
+<rl> ::= c | <lit>
+<ru> ::= (<var> + <digit>) | (<var> - <digit>) | (<digit> - <var>) | <var>
+<lit> ::= <digit> | <var>
+<digit> ::= 1 | 2 | <big_digit>
+<big_digit> ::= 3 | 4 | 5 | <bigger_digit>
+<bigger_digit> ::= 6 | 7 | <huge_digit>
+<huge_digit> ::= 8 | 9
+<var> ::= x

@@ -1,0 +1,7 @@
+if (x < 2) {
+ return 2;
+} else if (x < 3) {
+ return 1;
+} else {
+ return recurse(param(x, 1)) + recurse(param(x, 2));
+}

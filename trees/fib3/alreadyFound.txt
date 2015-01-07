@@ -1,0 +1,5 @@
+if (x < 2) {
+ return 1;
+} else {
+ return doMaths(recurse(param(x, 1)), x, '-') * recurse(param(x, 2)) + doMaths(x, recurse(param(x, 3)), '+');
+}
